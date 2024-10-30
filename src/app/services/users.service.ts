@@ -15,9 +15,7 @@ export class UsersService {
 
   registerUser(newUser: User): void{
     this.users.push(newUser)
-   /*  if(newUser.rol === 'accompanied'){
-      this.router.navigate([''])
-    } */
+
     console.log(this.users)
   }
 }

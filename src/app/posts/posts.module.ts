@@ -3,13 +3,10 @@ import { CommonModule } from '@angular/common';
 
 
 
-
 @NgModule({
-  declarations: [
-
-  ],
+  declarations: [],
   imports: [
     CommonModule
   ]
 })
-export class UserModule { }
+export class PostsModule { }
