@@ -35,13 +35,11 @@ onRegister() {
 
   this.usersService.registerUser(newUser)
 
-   if (rol === 'companion') {
-    this.router.navigate(['/companion']);
-  } else if (rol === 'accompanied') {
-    this.router.navigate(['/accompanied']);
+   if (newUser.rol === 'companion') {
+    this.router.navigate(['companion']);
+  } else if (newUser.rol === 'accompanied') {
+    this.router.navigate(['accompanied']);
   } 
- 
 } 
-
 
 }

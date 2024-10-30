@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './accompanied-view.component.css'
 })
 export class AccompaniedViewComponent {
+  
 
 }
