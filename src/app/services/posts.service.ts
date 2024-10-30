@@ -7,7 +7,7 @@ import { Post } from '../posts/post';
 export class PostsService {
   private posts: Post[] = []
 
-  constructor() { }
+  constructor() {  }
 
   getAllPosts():Post[]{
     return this.posts

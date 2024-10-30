@@ -6,6 +6,4 @@ export class Post {
         public duracion: string,
         public costo: string
     ){}
-
-
 }
