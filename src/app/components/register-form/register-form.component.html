@@ -1,0 +1,68 @@
+<div>
+
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+       <div class="inputField">
+           <label for="username">Username:</label>
+           <input id="username" formControlName="username" required>
+       </div>
+
+       <div class="inputField">
+           <label for="nombre">Nombre:</label>
+           <input id="nombre" formControlName="nombre" required>
+       </div>
+       
+       <div class="inputField">
+           <label for="apellidoP">Apellido Paterno:</label>
+           <input id="apellidoP" formControlName="apellidoP" required>
+       </div>
+       
+       <div class="inputField">
+           <label for="apellidoM">Apellido Materno:</label>
+           <input id="apellidoM" formControlName="apellidoM" required>
+        </div>
+        
+        <div class="inputField">
+           <label for="CURP">CURP:</label>
+           <input id="CURP" formControlName="CURP" required>
+
+       </div>
+       
+       <div class="inputField">
+
+           <label>Sexo:</label>
+           <label>
+             <input type="radio" formControlName="sexo" value="masculino" required>
+             Masculino
+           </label>
+           <label>
+             <input type="radio" formControlName="sexo" value="femenino" required>
+             Femenino
+           </label>
+         
+       </div>
+       
+       <div class="inputField">
+           <label>Rol:</label>
+           <label>
+             <input type="radio" formControlName="rol" value="companion" required>
+             Compañero
+           </label>
+           <label>
+             <input type="radio" formControlName="rol" value="accompanied" required>
+             Acompañado
+           </label>
+
+       </div>
+       
+       <div class="inputField">
+           <button type="submit">Registrar</button>
+
+       </div>
+      
+      
+      
+      
+      
+      </form>
+      
+</div>
