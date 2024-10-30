@@ -7,6 +7,20 @@
        </div>
 
        <div class="inputField">
+        <label for="password">Contraseña</label>
+        <input id="pass1" formControlName="pass1" type="password" required>
+     </div>
+
+     <div class="inputField">
+        <label for="password">Confirme contraseña</label>
+        <input id="pass2" formControlName="pass2" type="password" required>
+     </div>
+
+     <h2 *ngIf="registerForm.hasError('passwordsMismatch') && registerForm.get('pass2')?.touched" class="error">
+      Las contraseñas no coinciden.
+    </h2>
+
+       <div class="inputField">
            <label for="nombre">Nombre:</label>
            <input id="nombre" formControlName="nombre" required>
        </div>
@@ -24,11 +38,9 @@
         <div class="inputField">
            <label for="CURP">CURP:</label>
            <input id="CURP" formControlName="CURP" required>
-
        </div>
        
        <div class="inputField">
-
            <label>Sexo:</label>
            <label>
              <input type="radio" formControlName="sexo" value="masculino" required>
@@ -38,7 +50,6 @@
              <input type="radio" formControlName="sexo" value="femenino" required>
              Femenino
            </label>
-         
        </div>
        
        <div class="inputField">
@@ -51,18 +62,12 @@
              <input type="radio" formControlName="rol" value="accompanied" required>
              Acompañado
            </label>
-
        </div>
        
        <div class="inputField">
            <button type="submit">Registrar</button>
-
        </div>
-      
-      
-      
-      
-      
+
       </form>
       
 </div>
