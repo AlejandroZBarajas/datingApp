@@ -15,4 +15,5 @@ export class PostCardComponent implements OnInit {
   ngOnInit():void{
     const posts = this.postsService.getAllPosts()
   }
+
 }

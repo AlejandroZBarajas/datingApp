@@ -16,4 +16,9 @@ export class PostsService {
   publishPost(newPost: Post): void{
     this.posts.push(newPost)
   }
+
+  getPostsByUser(id:number): Post[]{
+    const postedBy = this.posts.filter(post=> post.postedBy === id.toString())
+    return postedBy
+  }
 }

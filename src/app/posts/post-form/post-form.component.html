@@ -1,0 +1,24 @@
+<div id="postBody">
+    <form (ngSubmit)="onSubmit()">
+        <div>
+            <label for="titulo">Titulo</label>
+            <input type="text" id="titulo" [(ngModel)]="titulo" name="titulo" required>
+        </div>
+
+        <div>
+            <label for="descripcion">Descripción</label>
+            <input type="text" id="descripcion" [(ngModel)]="descripción" name="descripcion" required>
+        </div>
+
+        <div>
+            <label for="duracion">Duración</label>
+            <input type="text" id="duracion" [(ngModel)]="duracion" name="duracion" required>
+        </div>
+
+        <div>
+            <label for="costo">Costo</label>
+            <input type="text" id="costo" [(ngModel)]="costo" name="costo" required>
+        </div>
+        <button type="submit">Publicar</button>
+    </form>
+</div>
