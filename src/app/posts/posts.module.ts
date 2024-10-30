@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PostCardComponent } from './post-card/post-card.component';
 import { PostFormComponent } from './post-form/post-form.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -11,7 +12,12 @@ import { PostFormComponent } from './post-form/post-form.component';
     PostFormComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+  ],
+  exports: [
+    PostCardComponent,
+    PostFormComponent
   ]
 })
 export class PostsModule { }

@@ -9,6 +9,7 @@ import { AccompaniedViewComponent } from './pages/accompanied-view/accompanied-v
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { LoginModule } from './login/login.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PostsModule } from './posts/posts.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    LoginModule
+    LoginModule,
+    PostsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

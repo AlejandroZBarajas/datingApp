@@ -3,7 +3,7 @@ import { Post } from '../post';
 import { PostsService } from '../../services/posts.service';
 
 @Component({
-  selector: 'app-post-form',
+  selector: 'post-form',
   templateUrl: './post-form.component.html',
   styleUrl: './post-form.component.css'
 })
@@ -25,13 +25,14 @@ export class PostFormComponent {
       this.costo
     )
     this.postsService.publishPost(newPost)
+    console.log("Nuevo post: ",newPost)
 
     this.postedBy = ('')
     this.titulo = ('')
     this.descripcion = ('')
     this.duracion = ('')
     this.costo  = ('')
+    
   }
-
 
 }

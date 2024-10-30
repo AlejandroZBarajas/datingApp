@@ -1,22 +1,22 @@
 <div id="postBody">
     <form (ngSubmit)="onSubmit()">
         <div>
-            <label for="titulo">Titulo</label>
+            <label for="titulo">Titulo: </label>
             <input type="text" id="titulo" [(ngModel)]="titulo" name="titulo" required>
         </div>
 
         <div>
-            <label for="descripcion">Descripción</label>
-            <input type="text" id="descripcion" [(ngModel)]="descripción" name="descripcion" required>
+            <label for="descripcion">Descripción: </label>
+            <input type="text" id="descripcion" [(ngModel)]="descripcion" name="descripcion" required>
         </div>
 
         <div>
-            <label for="duracion">Duración</label>
+            <label for="duracion">Duración (horas): </label>
             <input type="text" id="duracion" [(ngModel)]="duracion" name="duracion" required>
         </div>
 
         <div>
-            <label for="costo">Costo</label>
+            <label for="costo">Costo $MXN: </label>
             <input type="text" id="costo" [(ngModel)]="costo" name="costo" required>
         </div>
         <button type="submit">Publicar</button>
