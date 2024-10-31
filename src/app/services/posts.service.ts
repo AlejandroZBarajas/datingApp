@@ -18,7 +18,7 @@ export class PostsService {
   }
 
   getPostsByUser(id:number): Post[]{
-    const postedBy = this.posts.filter(post=> post.postedBy === id.toString())
+    const postedBy = this.posts.filter(post=> post.postedBy === id)
     return postedBy
   }
 }

@@ -8,7 +8,7 @@ import { PostsService } from '../../services/posts.service';
   styleUrl: './post-form.component.css'
 })
 export class PostFormComponent {
-  postedBy = ('')
+  postedBy = 0
   titulo = ('')
   descripcion = ('')
   duracion = ('')
@@ -27,12 +27,11 @@ export class PostFormComponent {
     this.postsService.publishPost(newPost)
     console.log("Nuevo post: ",newPost)
 
-    this.postedBy = ('')
+    this.postedBy = 0
     this.titulo = ('')
     this.descripcion = ('')
     this.duracion = ('')
     this.costo  = ('')
-    
   }
 
 }

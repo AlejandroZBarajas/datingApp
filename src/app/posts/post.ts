@@ -1,6 +1,6 @@
 export class Post {
     constructor (
-        public postedBy: string,
+        public postedBy: number,
         public titulo: string,
         public descripcion: string, 
         public duracion: string,
