@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators, ValidatorFn } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UsersService } from '../../services/users.service';
-import { User } from '../../user/model/user';
+import { UsersService } from '../../../services/users.service';
+import { User } from '../../model/user';
 
 @Component({
   selector: 'register-form',
@@ -21,7 +21,7 @@ export class RegisterFormComponent {
       nombre: new FormControl ('', Validators.required),
       apellidoP: new FormControl ('', Validators.required),
       apellidoM: new FormControl ('', Validators.required),
-      CURP: new FormControl ('', Validators.required),
+      
       sexo: new FormControl ('', Validators.required),
       rol: new FormControl ('', Validators.required)
 
@@ -42,15 +42,15 @@ passwordsMatchValidator(): ValidatorFn{
 onRegister() {
 
   if(this.registerForm.valid){
-    const {username, pass1, nombre, apellidoP, apellidoM, CURP, sexo, rol} = this.registerForm.value
+    const {username, pass1, nombre, apellidoP, apellidoM, sexo, rol} = this.registerForm.value
 
-    const newUser = new User(username, pass1, nombre, apellidoP, apellidoM, CURP, sexo, rol)
+    const newUser = new User(username, pass1, nombre, apellidoP, apellidoM, sexo, rol)
 
     this.usersService.registerUser(newUser)
   
-     if (newUser.rol === 'companion') {
+     if (newUser.rol === 'Companion') {
       this.router.navigate(['companion']);
-    } else if (newUser.rol === 'accompanied') {
+    } else if (newUser.rol === 'Accompanied') {
       this.router.navigate(['accompanied']);
     } 
   }

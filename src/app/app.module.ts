@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CompanionViewComponent } from './pages/companion-view/companion-view.component';
 import { AccompaniedViewComponent } from './pages/accompanied-view/accompanied-view.component';
-import { RegisterFormComponent } from './components/register-form/register-form.component';
-import { LoginModule } from './login/login.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PostsModule } from './posts/posts.module';
+import { UserModule } from './user/user.module';
+
 
 @NgModule({
   declarations: [
@@ -17,14 +17,13 @@ import { PostsModule } from './posts/posts.module';
     HomeComponent,
     CompanionViewComponent,
     AccompaniedViewComponent,
-    RegisterFormComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    LoginModule,
+    UserModule,
     PostsModule
   ],
   providers: [],

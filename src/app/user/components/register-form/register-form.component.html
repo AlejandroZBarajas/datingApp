@@ -2,7 +2,7 @@
 
       <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
        <div class="inputField">
-           <label for="username">Username:</label>
+           <label for="username">Nombre de usuario: </label>
            <input id="username" formControlName="username" required>
        </div>
 
@@ -34,11 +34,6 @@
            <label for="apellidoM">Apellido Materno:</label>
            <input id="apellidoM" formControlName="apellidoM" required>
         </div>
-        
-        <div class="inputField">
-           <label for="CURP">CURP:</label>
-           <input id="CURP" formControlName="CURP" required>
-       </div>
        
        <div class="inputField">
            <label>Sexo:</label>

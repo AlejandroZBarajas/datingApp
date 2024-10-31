@@ -5,8 +5,7 @@ export class User {
         public nombre: string,
         public apellidoP: string,
         public apellidoM: string,
-        public CURP: string,
-        public sexo: string,
-        public rol: 'companion' | 'accompanied'
+        public sexo: 'Hombre' | 'Mujer',
+        public rol: 'Companion' | 'Accompanied'
     ){}
 }
