@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostCardComponent } from '../../posts/post-card/post-card.component';
+import { PostFormComponent } from '../../posts/post-form/post-form.component';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
@@ -20,17 +21,24 @@ export class UserViewComponent implements OnInit{
   }
   
   ngOnInit(){
-    console.log("rol: ",this.auth.getUserRol())
     //this.userId = this.auth.getUserId() ?? 0
-    this.role=this.auth.getUserRol() ?? ''
-      if(this.auth.getUserRol()==='Accompanied'){
-        this.posts=this.postsService.getAllPosts()
+    this.role=localStorage.getItem('rol') ?? ""
+    if(localStorage.getItem('rol')==='Accompanied'){
+      this.posts=this.postsService.getAllPosts()
     }
+    console.log("rol: ",this.role)
+    console.log("posts: ", this.postsService.getAllPosts())
 }
 
 
   onLogoClick():void{  //ya funciona
+    console.log("boton home")
     this.router.navigate(['main']);
+  }
+
+  toSettings(){
+    console.log("rol: ",this.role)
+    console.log("posts: ",this.posts)
   }
   
   cerrarSesion():void{  //ya funciona

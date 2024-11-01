@@ -11,8 +11,10 @@ export class AuthService {
   constructor() { }
 
   onLogin( _userRol: string){
+    console.log("authservice recibe el rol: ", _userRol)
     //this.userId= _userId
     this.userRol= _userRol
+    localStorage.setItem('rol', _userRol)
   }
 
   logout():void{

@@ -13,7 +13,7 @@ export class PostCardComponent implements OnInit {
   constructor (private postsService: PostsService){}
 
   ngOnInit():void{
-    const posts = this.postsService.getAllPosts()
+    this.posts = this.postsService.getAllPosts()
   }
 
 }
