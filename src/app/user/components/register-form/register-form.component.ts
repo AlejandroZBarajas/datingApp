@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { UsersService } from '../../../services/users.service';
 import { User } from '../../model/user';
 
+
 @Component({
   selector: 'register-form',
   templateUrl: './register-form.component.html',
@@ -47,12 +48,12 @@ onRegister() {
     const newUser = new User(username, pass1, nombre, apellidoP, apellidoM, sexo, rol)
 
     this.usersService.registerUser(newUser)
-  
-     if (newUser.rol === 'Companion') {
-      this.router.navigate(['companion']);
+    this.router.navigate(['main']);
+     /* if (newUser.rol === 'Companion') {
+      this.router.navigate(['ma']);
     } else if (newUser.rol === 'Accompanied') {
       this.router.navigate(['accompanied']);
-    } 
+    } */ 
   }
 } 
 
