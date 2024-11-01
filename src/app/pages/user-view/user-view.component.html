@@ -1,6 +1,6 @@
 <div id="body">
     <div class="main" id="panel">
-        <div id="logo">
+        <div id="logo" (click)="onLogoClick()">
             <img src="logo.jpg" alt="It's a date logo">
         </div>
         <div id="side">
@@ -15,19 +15,14 @@
             </div>
         </div>
        
-        <div id="logoff"><h5>Cerrar serión</h5></div>
+        <div id="logoff" (click)="cerrarSesion()">
+            <h5>Cerrar serión</h5>
+        </div>
     </div>
-
 
     <div class="main" id="posts">
-
+        <div *ngIf="role==='Accompanied'">
+            <post-card *ngFor="let post of posts"></post-card>
+        </div>
     </div>
-
-
-
-
-
-
-
-
 </div>

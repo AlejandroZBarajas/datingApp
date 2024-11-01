@@ -7,7 +7,24 @@ import { Post } from '../posts/post';
 export class PostsService {
   private posts: Post[] = []
 
-  constructor() {  }
+
+
+  constructor() { 
+    this.posts=[{
+      postedBy:1,
+      titulo:"cogidita",
+      descripcion:"te voy a dar una cogidita chida",
+      duracion:"una hora o lo que tardes",
+      costo:"200"
+    },{
+      postedBy:2,
+      titulo:"masage",
+      descripcion:"va a estar chido y vas a acabar relajado",
+      duracion:"una hora",
+      costo:"400"
+    }
+  ]
+   }
 
   getAllPosts():Post[]{
     return this.posts

@@ -3,6 +3,7 @@ import { AbstractControl, FormControl, FormGroup, Validators, ValidatorFn } from
 import { Router } from '@angular/router';
 import { UsersService } from '../../../services/users.service';
 import { User } from '../../model/user';
+import { AuthService } from '../../../services/auth.service';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { User } from '../../model/user';
 export class RegisterFormComponent {
   registerForm: FormGroup;
 
-  constructor(private usersService: UsersService, private router: Router){
+  constructor(private usersService: UsersService, private router: Router, private authS: AuthService){
     this.registerForm = new FormGroup({
 
       username: new FormControl ('', Validators.required),
@@ -48,12 +49,8 @@ onRegister() {
     const newUser = new User(username, pass1, nombre, apellidoP, apellidoM, sexo, rol)
 
     this.usersService.registerUser(newUser)
+    this.authS.onLogin(newUser.rol)
     this.router.navigate(['main']);
-     /* if (newUser.rol === 'Companion') {
-      this.router.navigate(['ma']);
-    } else if (newUser.rol === 'Accompanied') {
-      this.router.navigate(['accompanied']);
-    } */ 
   }
 } 
 
