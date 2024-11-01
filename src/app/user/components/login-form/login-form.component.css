@@ -1,0 +1,32 @@
+#body{
+    border:solid red;
+    background-color: rgb(245, 134, 93);;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    max-width: fit-content;
+    padding: 40px;
+}
+.inputField{
+    padding:10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+label, input{
+    width: 100%;
+
+}
+
+#form{
+    border-radius: 20px;
+    background-color: white;
+    border-color: red;
+    width: 60%;
+    margin: 50px;
+    padding:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

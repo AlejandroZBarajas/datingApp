@@ -12,13 +12,13 @@ export class PostsService {
   constructor() { 
     this.posts=[{
       postedBy:1,
-      titulo:"cogidita",
-      descripcion:"te voy a dar una cogidita chida",
+      titulo:"tu sabes que es ",
+      descripcion:"te voy a dar una pasadita chida",
       duracion:"una hora o lo que tardes",
-      costo:"200"
+      costo:"800"
     },{
       postedBy:2,
-      titulo:"masage",
+      titulo:"massage",
       descripcion:"va a estar chido y vas a acabar relajado",
       duracion:"una hora",
       costo:"400"

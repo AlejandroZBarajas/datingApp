@@ -13,10 +13,10 @@ export class LoginFormComponent implements OnInit{
   loginForm: FormGroup;
 
 
-  constructor(private userService: UsersService){
+  constructor(private userService: UsersService, private router: Router){
     this.loginForm = new FormGroup({
       username: new FormControl(''),
-      password: new FormControl('')
+      passwrd: new FormControl('')
     })
   }
 
@@ -24,17 +24,23 @@ export class LoginFormComponent implements OnInit{
       
   }
   login(){
-
-  }
-
-   /*  onLogin() {
-    const userRole = this.getUserRole(); // Método para obtener el rol del usuario
-    if (userRole === 'companion') {
-      this.router.navigate(['/companion']);
-    } else if (userRole === 'accompanied') {
-      this.router.navigate(['/accompanied']);
+    console.log(this.loginForm.value)
+    if(this.loginForm.valid){
+      const{username,passwrd} = this.loginForm.value
+      this.userService.login(username,passwrd).subscribe({
+        next: (response) => {
+          console.log("usuario loggeado: ",response)
+          //  localStorage.setItem("role")
+          this.router.navigate(['main'])
+        },
+        error:(error) => {
+          console.log("error: ",error)
+        }
+       })
     }
+
   }
-   */
+
+
 
 }

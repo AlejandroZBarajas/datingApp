@@ -1,6 +1,6 @@
-<div>
+<div id="body">
 
-      <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()" id="form">
        <div class="inputField">
            <label for="username">Nombre de usuario: </label>
            <input id="username" formControlName="username" required>
@@ -21,8 +21,8 @@
     </h2>
 
        <div class="inputField">
-           <label for="nombre">Nombre:</label>
-           <input id="nombre" formControlName="nombre" required>
+           <label for="nombres">Nombre:</label>
+           <input id="nombrs" formControlName="nombres" required>
        </div>
        
        <div class="inputField">
@@ -36,19 +36,19 @@
         </div>
        
        <div class="inputField">
-           <label>Sexo:</label>
+           <label class="radios">Sexo:</label>
            <label>
-             <input type="radio" formControlName="sexo" value="masculino" required>
-             Masculino
+             <input type="radio" formControlName="sexo" value="Hombre" required>
+             Hombre
            </label>
            <label>
-             <input type="radio" formControlName="sexo" value="femenino" required>
-             Femenino
+             <input type="radio" formControlName="sexo" value="Mujer" required>
+            Mujer
            </label>
        </div>
        
        <div class="inputField">
-           <label>Rol:</label>
+           <label class="radios">Rol:</label>
            <label>
              <input type="radio" formControlName="rol" value="Companion" required>
              Compañero
@@ -59,7 +59,7 @@
            </label>
        </div>
        
-       <div class="inputField">
+       <div class="inputField" id="btn">
            <button type="submit">Registrar</button>
        </div>
 

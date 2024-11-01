@@ -5,6 +5,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { FormGroup, FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PostFormComponent } from '../posts/post-form/post-form.component';
+import { CardComponent } from './components/card/card.component';
 
 
 
@@ -12,6 +13,7 @@ import { PostFormComponent } from '../posts/post-form/post-form.component';
   declarations: [
   RegisterFormComponent,
   LoginFormComponent,
+  CardComponent,
 
   ],
   imports: [

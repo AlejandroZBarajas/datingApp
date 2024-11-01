@@ -25,5 +25,8 @@
             <h2>Publicaciones de acompañantes</h2>
             <post-card *ngFor="let post of posts"></post-card>
         </div>
+        <div *ngIf="role==='Companion'">
+            <h2>Tus publicaciones</h2>
+        </div>
     </div>
 </div>
