@@ -37,4 +37,10 @@ deleteId(id:number){
   return this.http.delete<any>(`${this.api}users/${id}`)
 }
 
+updateUser(userId: number, user: Partial<User>) {
+  console.log("ruta para actualizar: ",`${this.api}${userId}`)
+  return this.http.put(`${this.api}users/${userId}`, user);
+}
+
+
 }

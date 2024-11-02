@@ -80,14 +80,10 @@ onRegister() {
           
         }
       });
-    }
-
-
-
-
-
-
-
+    }  
+  }
+} 
+}
 
 
     /* const {username, pass1, nombres, apellidoP, apellidoM, sexo, rol} = this.registerForm.value
@@ -117,9 +113,3 @@ onRegister() {
     this.authS.onLogin(newUser.rol)
     this.router.navigate(['main']); */
     
-
-
-  }
-} 
-
-}

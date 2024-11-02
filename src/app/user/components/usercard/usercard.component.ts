@@ -40,7 +40,7 @@ export class UsercardComponent implements OnInit{
   }
 
   toEdit(): void{
-    console.log("etid mode")
+    this.router.navigate(['/update'])
 
   }
 
