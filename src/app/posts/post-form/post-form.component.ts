@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+/* import { Component } from '@angular/core';
 import { Post } from '../post';
 import { PostsService } from '../../services/posts.service';
 
@@ -8,7 +8,7 @@ import { PostsService } from '../../services/posts.service';
   styleUrl: './post-form.component.css'
 })
 export class PostFormComponent {
-  postedBy = 0
+
   titulo = ('')
   descripcion = ('')
   duracion = ('')
@@ -18,16 +18,18 @@ export class PostFormComponent {
 
   onSubmit( ):void{
     const newPost = new Post(
-      this.postedBy,
+
       this.titulo,
       this.descripcion,
       this.duracion,
       this.costo
     )
     this.postsService.publishPost(newPost)
-    console.log("Nuevo post: ",newPost)
+    this.resetForm()
 
-    this.postedBy = 0
+  }
+  resetForm(){
+
     this.titulo = ('')
     this.descripcion = ('')
     this.duracion = ('')
@@ -35,3 +37,4 @@ export class PostFormComponent {
   }
 
 }
+ */

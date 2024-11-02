@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { User } from '../user/model/user';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -24,7 +23,7 @@ export class UsersService {
   login(username: string, passwrd: string): Observable<any> {
     const body = { username, passwrd };
     console.log(`${this.apiURL}login/`, body); // Mover el console.log aquí
-    return this.http.post<any>(`${this.apiURL}login/`, body);
+    return this.http.post<any>(`${this.api}login/`, body);
 }
 
 getById(id:number){
@@ -34,11 +33,11 @@ getById(id:number){
 
 deleteId(id:number){
   console.log(`${this.api}users/${id}`)
-  return this.http.delete<any>(`${this.api}users/${id}`)
+  return this.http.delete<any>(`${this.api}users/${id}/`)
 }
 
 updateUser(userId: number, user: Partial<User>) {
-  console.log("ruta para actualizar: ",`${this.api}${userId}`)
+  console.log("ruta para actualizar: ",`${this.api}${userId}/`)
   return this.http.put(`${this.api}users/${userId}`, user);
 }
 

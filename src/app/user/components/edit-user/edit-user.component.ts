@@ -62,7 +62,7 @@ export class EditUserComponent implements OnInit {
       this.usersService.updateUser(this.user_id, updatedUser).subscribe({
         next: () => {
           console.log('Usuario actualizado correctamente');
-          this.router.navigate(['profile']); // Redirige a la lista de usuarios o a otra página
+          this.router.navigate(['profile']); 
         },
         error: (error) => {
           console.error('Error al actualizar usuario:', error);

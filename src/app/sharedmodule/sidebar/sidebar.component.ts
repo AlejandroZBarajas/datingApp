@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'sidebar',
@@ -7,8 +8,11 @@ import { Router } from '@angular/router';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
+  rol = ('') 
 
-  constructor(private router: Router){}
+  constructor(private router: Router){
+    this.rol = localStorage.getItem("rol") ?? ('')
+  }
 
   onLogoClick():void{  //ya funciona
     console.log("funciona")
@@ -22,5 +26,10 @@ export class SidebarComponent {
   cerrarSesion():void{  //ya funciona
     localStorage.setItem('rol',"")
     this.router.navigate(['home'])
+  }
+  toPost(){
+    this.router.navigate(['newPost'])
+
+
   }
 }

@@ -13,7 +13,12 @@
                 <h2>Agenda</h2>
            
             </div>
+            <div class="sideOPT" id="newPost" (click)="toPost()" *ngIf="rol === 'Companion'">
+                <h2 id="post">+ Nuevo post </h2>
+            </div>
         </div>
+       
+        
        
         <div id="logoff" (click)="cerrarSesion()">
             <h5>Cerrar serión</h5>

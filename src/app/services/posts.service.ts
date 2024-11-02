@@ -1,41 +1,37 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../posts/post';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostsService {
-  private posts: Post[] = []
+  private api = 'http://0.0.0.0:8000/'
 
-
-
-  constructor() { 
-    this.posts=[{
-      postedBy:1,
-      titulo:"tu sabes que es ",
-      descripcion:"te voy a dar una pasadita chida",
-      duracion:"una hora o lo que tardes",
-      costo:"800"
-    },{
-      postedBy:2,
-      titulo:"massage",
-      descripcion:"va a estar chido y vas a acabar relajado",
-      duracion:"una hora",
-      costo:"400"
-    }
-  ]
+  constructor(private http: HttpClient) { 
+    
    }
 
-  getAllPosts():Post[]{
-    return this.posts
+  toPost(newPost:Post):Observable<any>{
+    return this.http.post(`${this.api}posts/`, newPost)
+
   }
 
-  publishPost(newPost: Post): void{
-    this.posts.push(newPost)
+
+  getAllPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.api}posts/`);
   }
 
-  getPostsByUser(id:number): Post[]{
-    const postedBy = this.posts.filter(post=> post.postedBy === id)
-    return postedBy
+  publishPost(newPost: Post): void {
+    this.toPost(newPost).subscribe({
+      next: (response) => console.log('Post publicado:', response),
+      error: (error) => console.error('Error al publicar post:', error),
+    });
+  }
+
+
+  getPostsByUser(id: number): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.api}users/${id}/posts`);
   }
 }

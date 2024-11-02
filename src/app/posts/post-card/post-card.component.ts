@@ -9,7 +9,7 @@ import { Post } from '../post';
 export class PostCardComponent implements OnInit {
   @Input() post!: Post;
   rol: string = ('')
-  userId:number=0
+  user_id:number=0
 
   constructor (){}
 

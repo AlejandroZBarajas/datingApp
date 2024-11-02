@@ -30,6 +30,15 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+#newPost{
+    border-radius: 25px;
+    background-color: rgb(237, 124, 75);
+}
+#post{
+    text-align: center;
+    color:white;
+}
+
 #logoff{
 
     margin-top:100px;
