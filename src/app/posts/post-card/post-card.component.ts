@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Post } from '../post';
-import { PostsService } from '../../services/posts.service';
 
 @Component({
   selector: 'post-card',
@@ -8,12 +7,15 @@ import { PostsService } from '../../services/posts.service';
   styleUrl: './post-card.component.css'
 })
 export class PostCardComponent implements OnInit {
-  posts: Post[]=[]
+  @Input() post!: Post;
+  rol: string = ('')
+  userId:number=0
 
-  constructor (private postsService: PostsService){}
+  constructor (){}
 
   ngOnInit():void{
-    this.posts = this.postsService.getAllPosts()
+    this.rol=localStorage.getItem('rol')?? ""
+
   }
 
 }

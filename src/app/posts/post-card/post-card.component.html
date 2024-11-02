@@ -1,7 +1,7 @@
-<div *ngFor="let post of posts" id="cardBody">
+<div id="cardBody">
     <div id="headers">
-        <h2>{{post.titulo}}</h2>
         <h3>{{post.postedBy}}</h3>
+        <h2>{{post.titulo}}</h2>
     </div>
     <div id="desc">
         <p>{{post.descripcion}}</p>
@@ -9,5 +9,15 @@
     <div id="info">
         <div><h3>{{post.duracion}}</h3></div>
         <div><h3>{{post.costo}}</h3></div>
+    </div>
+    <div id="bnts">
+        <div *ngIf="rol==='Companion'" id="dualbtn">
+
+            <button>Editar</button>
+            <button>Solicitar</button>
+        </div>
+        <div *ngIf="rol==='Acompanied'" id="singlebtn">
+            <button>Solicitar</button>
+        </div>
     </div>
 </div>

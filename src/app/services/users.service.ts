@@ -25,5 +25,8 @@ export class UsersService {
     return this.http.post<any>(`${this.apiURL}login/`, body);
 }
 
+getById(id:number){
+  return this.http.get<any>(`${this.apiURL}${id}`)
+}
 
 }

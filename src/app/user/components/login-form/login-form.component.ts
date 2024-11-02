@@ -30,7 +30,8 @@ export class LoginFormComponent implements OnInit{
       this.userService.login(username,passwrd).subscribe({
         next: (response) => {
           console.log("usuario loggeado: ",response)
-          //  localStorage.setItem("role")
+          localStorage.setItem("rol", response.role)
+          localStorage.setItem("id",response.user_id)
           this.router.navigate(['main'])
         },
         error:(error) => {

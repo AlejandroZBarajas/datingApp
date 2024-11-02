@@ -1,29 +1,12 @@
 <div id="body">
-    <div class="main" id="panel">
-        <div id="logo" (click)="onLogoClick()">
-            <img src="logo.jpg" alt="It's a date logo">
-        </div>
-        <div id="side">
-            
-            <div class="sideOPT" (click)="toSettings()">
-                <h2>Ajustes de usuario</h2>
-            </div>
-           
-            <div class="sideOPT">
-                <h2>Agenda</h2>
-           
-            </div>
-        </div>
-       
-        <div id="logoff" (click)="cerrarSesion()">
-            <h5>Cerrar serión</h5>
-        </div>
+    <div id="sidebar">
+        <sidebar></sidebar>
     </div>
-
     <div class="main" id="posts">
         <div *ngIf="role==='Accompanied'">
             <h2>Publicaciones de acompañantes</h2>
-            <post-card *ngFor="let post of posts"></post-card>
+            
+            
         </div>
         <div *ngIf="role==='Companion'">
             <h2>Tus publicaciones</h2>

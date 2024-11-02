@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-import { FormGroup, FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import { PostFormComponent } from '../posts/post-form/post-form.component';
-import { CardComponent } from './components/card/card.component';
+import { FormGroup, FormsModule, ReactiveFormsModule  } from '@angular/forms';
+
+import { PostsModule } from '../posts/posts.module';
+import { UsercardComponent } from './components/usercard/usercard.component';
+import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
+
+
+
 
 
 
@@ -13,17 +17,21 @@ import { CardComponent } from './components/card/card.component';
   declarations: [
   RegisterFormComponent,
   LoginFormComponent,
-  CardComponent,
-
+  UsercardComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PostsModule,
+    SharedmoduleModule
+ 
   ],
   exports: [
     RegisterFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    UsercardComponent
+
   ]
 })
 export class UserModule { }

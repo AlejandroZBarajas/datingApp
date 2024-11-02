@@ -14,7 +14,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RegisterFormComponent {
   registerForm: FormGroup;
-  private apiURL = 'http://192.168.1.68:8000/users/'
+  private apiURL = 'http://0.0.0.0:8000/users/'
+  //'http://localhost:8000/users/'
+  //'http://192.168.1.68:8000/users/'
 //'http://127.0.0.1:8000/users/'
 //'http://192.168.1.68:8000'
 
@@ -62,19 +64,20 @@ onRegister() {
 
       // Hacer la petición directamente a la API
       this.http.post(this.apiURL, newUser, {
-        headers: { 
+        /* headers: { 
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin':'*'
-         }
+         } */
       }).subscribe({
         next: (response) => {
-          console.log('Usuario registrado:', response); // Maneja la respuesta de la API si es necesario
-          this.authS.onLogin(rol); // Lógica de inicio de sesión según el rol del usuario
+          console.log('Usuario registrado:', response); 
+          //this.authS.onLogin(rol); 
+          //localStorage.setItem("rol",response.role)
           this.router.navigate(['main']); // Redirige a la página principal
         },
         error: (error) => {
-          console.error('Error al registrar usuario:', error); // Manejo de errores
-          // Aquí puedes mostrar un mensaje al usuario o tomar otras acciones
+          console.error('Error al registrar usuario:', error); 
+          
         }
       });
     }

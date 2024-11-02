@@ -7,6 +7,7 @@ import { AuthService } from '../../services/auth.service';
 import { PostsService } from '../../services/posts.service';
 import { Post } from '../../posts/post';
 
+
 @Component({
   selector: 'user-view',
   templateUrl: './user-view.component.html',
@@ -32,7 +33,6 @@ export class UserViewComponent implements OnInit{
 
 
   onLogoClick():void{  //ya funciona
-    console.log("boton home")
     this.router.navigate(['main']);
   }
 
@@ -42,7 +42,7 @@ export class UserViewComponent implements OnInit{
   }
   
   cerrarSesion():void{  //ya funciona
-    this.auth.logout()
+    localStorage.setItem('rol',"")
     this.router.navigate(['home'])
   }
 
