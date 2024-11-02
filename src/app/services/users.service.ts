@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class UsersService {
   private apiURL = 'http://localhost:8000/'
+  private api = 'http://0.0.0.0:8000/'
+  
 
   constructor(private http: HttpClient) { }
 
@@ -26,7 +28,13 @@ export class UsersService {
 }
 
 getById(id:number){
-  return this.http.get<any>(`${this.apiURL}${id}`)
+  console.log("url del fetch",`${this.api}users/${id}`)
+  return this.http.get<any>(`${this.api}users/${id}/`)
+}
+
+deleteId(id:number){
+  console.log(`${this.api}users/${id}`)
+  return this.http.delete<any>(`${this.api}users/${id}`)
 }
 
 }

@@ -1,6 +1,43 @@
 #body{
     width: 100%;
+    display: flex;
 }
 #sidebar{
     width: 40%;
+}
+#cardCont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-left: solid rgb(157, 157, 157);
+    width: 50%;    
+}
+#card{
+
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+}
+#titulo{
+    display: block;
+   min-width: 100%;
+
+   height: fit-content;
+   align-items: center;
+   background-color: rgba(234, 101, 45, 1);
+   padding: 20px;
+   display: flex;
+   justify-content: space-around;
+}
+h1{
+    color:rgba(234, 101, 45, 1);
+    text-align: center;
+}
+#textcont{
+    background-color:  white;
+    border-radius: 25px;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
 }
