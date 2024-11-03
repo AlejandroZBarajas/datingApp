@@ -1,16 +1,16 @@
 export class Post {
-    post_id: number =0;
-    postedBy: number; // Asegúrate de que esta propiedad exista
-    titulo: string;
-    descripcion: string;
-    duracion: string;
-    costo: string;
+
+  titulo: string;
+  descripcion: string;
+  duracion: string;
+  costo: string;
+  user_id: number; // Asegúrate de que esta propiedad exista
   
-    constructor(postedBy: number, titulo: string, descripcion: string, duracion: string, costo: string) {
-      this.postedBy = postedBy;
+    constructor(titulo: string, descripcion: string, duracion: string, costo: string, postedBy: number) {
       this.titulo = titulo;
       this.descripcion = descripcion;
       this.duracion = duracion;
       this.costo = costo;
+      this.user_id = postedBy;
     }
   }

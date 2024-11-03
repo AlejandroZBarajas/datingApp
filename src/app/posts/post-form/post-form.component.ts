@@ -1,6 +1,7 @@
-/* import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { Post } from '../post';
 import { PostsService } from '../../services/posts.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'post-form',
@@ -13,28 +14,36 @@ export class PostFormComponent {
   descripcion = ('')
   duracion = ('')
   costo  = ('')
+  user_id = Number(localStorage.getItem("id"))
 
-  constructor(private postsService: PostsService){}
+  constructor(private postsService: PostsService, private router: Router){}
 
   onSubmit( ):void{
     const newPost = new Post(
-
       this.titulo,
       this.descripcion,
       this.duracion,
-      this.costo
+      this.costo,
+      this.user_id
     )
-    this.postsService.publishPost(newPost)
+    this.postsService.publishPost(newPost).subscribe({
+      next: response=> {
+        console.log("successfull publish: ",response)
+      }
+    })
     this.resetForm()
 
   }
   resetForm(){
-
     this.titulo = ('')
     this.descripcion = ('')
     this.duracion = ('')
     this.costo  = ('')
+    this.router.navigate(['main'])
+  }
+
+  return(){
+    this.router.navigate(['main'])
   }
 
 }
- */

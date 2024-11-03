@@ -16,34 +16,27 @@ import { Post } from '../../posts/post';
 export class UserViewComponent implements OnInit{
    posts: Post []=[]
    role:string=('') 
-   userId:number=0
+   user_id:number=0
 
   constructor(private router: Router, private auth: AuthService, private postsService: PostsService){
   }
   
   ngOnInit(){
-    //this.userId = this.auth.getUserId() ?? 0
     this.role=localStorage.getItem('rol') ?? ""
     if(localStorage.getItem('rol')==='Accompanied'){
-      this.posts=this.postsService.getAllPosts()
+      this.loadPosts()
     }
-    console.log("rol: ",this.role)
-    console.log("posts: ", this.postsService.getAllPosts())
-}
-
-
-  onLogoClick():void{  //ya funciona
-    this.router.navigate(['main']);
   }
 
-  toSettings(){
-    console.log("rol: ",this.role)
-    console.log("posts: ",this.posts)
+  loadPosts(){
+    this.postsService.getAllPosts().subscribe({
+      next:(data:Post[])=>{
+        this.posts=data
+        console.log("posts: ",this.posts)
+      },
+      error:(error)=> {
+        console.log("error: ",error)
+      }
+    })
   }
-  
-  cerrarSesion():void{  //ya funciona
-    localStorage.setItem('rol',"")
-    this.router.navigate(['home'])
-  }
-
 }

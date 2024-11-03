@@ -9,7 +9,7 @@ import { UserModule } from './user/user.module';
 import { UserViewComponent } from './pages/user-view/user-view.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SharedmoduleModule } from './sharedmodule/sharedmodule.module';
-import { NewPostComponent } from './pages/new-post/new-post.component';
+
 
 
 
@@ -19,7 +19,7 @@ import { NewPostComponent } from './pages/new-post/new-post.component';
     HomeComponent,
     ProfileComponent,
     UserViewComponent,
-    NewPostComponent
+
   ],
   imports: [
     BrowserModule,

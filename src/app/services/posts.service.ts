@@ -7,31 +7,31 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PostsService {
-  private api = 'http://0.0.0.0:8000/'
+
+  private url = 'http://0.0.0.0:8000/posts/'
 
   constructor(private http: HttpClient) { 
     
    }
 
   toPost(newPost:Post):Observable<any>{
-    return this.http.post(`${this.api}posts/`, newPost)
+    return this.http.post(this.url, newPost)
 
   }
 
 
   getAllPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.api}posts/`);
+    return this.http.get<Post[]>(this.url);
   }
 
-  publishPost(newPost: Post): void {
-    this.toPost(newPost).subscribe({
-      next: (response) => console.log('Post publicado:', response),
-      error: (error) => console.error('Error al publicar post:', error),
-    });
+  publishPost(post: Post):Observable<Post> {
+    console.log("url: ",this.url)
+    console.log("se va el objeto: ",post)
+    return this.http.post<Post>(this.url,post);
   }
 
 
   getPostsByUser(id: number): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.api}users/${id}/posts`);
+    return this.http.get<Post[]>(`${this.url}user/${id}`);
   }
 }
