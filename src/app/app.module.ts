@@ -9,6 +9,7 @@ import { UserModule } from './user/user.module';
 import { UserViewComponent } from './pages/user-view/user-view.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SharedmoduleModule } from './sharedmodule/sharedmodule.module';
+import { PostsModule } from './posts/posts.module';
 
 
 
@@ -27,7 +28,8 @@ import { SharedmoduleModule } from './sharedmodule/sharedmodule.module';
     ReactiveFormsModule,
     UserModule,
     HttpClientModule,
-    SharedmoduleModule
+    SharedmoduleModule,
+    PostsModule
     
   ],
   providers: [],

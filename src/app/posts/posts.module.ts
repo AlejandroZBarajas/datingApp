@@ -19,7 +19,8 @@ import { PostsByUserIdComponent } from './posts-by-user-id/posts-by-user-id.comp
   ],
   exports: [
     PostCardComponent,
-    PostFormComponent
+    PostFormComponent,
+    PostsByUserIdComponent
   ]
 })
 export class PostsModule { }

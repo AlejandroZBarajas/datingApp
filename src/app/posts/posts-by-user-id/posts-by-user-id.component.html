@@ -1,1 +1,4 @@
-<p>posts-by-user-id works!</p>
+<div id="postsContainer">
+    <h2>Tus publicaciones</h2>
+    <post-card *ngFor="let post of posts" [post]="post"></post-card>
+</div>

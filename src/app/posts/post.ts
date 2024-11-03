@@ -4,7 +4,7 @@ export class Post {
   descripcion: string;
   duracion: string;
   costo: string;
-  user_id: number; // Asegúrate de que esta propiedad exista
+  user_id: number; 
   
     constructor(titulo: string, descripcion: string, duracion: string, costo: string, postedBy: number) {
       this.titulo = titulo;

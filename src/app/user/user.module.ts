@@ -8,6 +8,7 @@ import { UsercardComponent } from './components/usercard/usercard.component';
 import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { PostsByUserIdComponent } from '../posts/posts-by-user-id/posts-by-user-id.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
   exports: [
     RegisterFormComponent,
     LoginFormComponent,
-    UsercardComponent
+    UsercardComponent,
+    PostsByUserIdComponent
   ]
 })
 export class UserModule { }

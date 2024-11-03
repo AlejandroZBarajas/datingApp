@@ -32,6 +32,7 @@ export class PostsService {
 
 
   getPostsByUser(id: number): Observable<Post[]> {
+    console.log("llega al servicio y busca posts by id")
     return this.http.get<Post[]>(`${this.url}user/${id}`);
   }
 }

@@ -5,11 +5,12 @@
     <div class="main" id="posts">
         <div *ngIf="role==='Accompanied'">
             <h2>Publicaciones de acompañantes</h2>
-            
+            <div>
+            </div>
             
         </div>
         <div *ngIf="role==='Companion'">
-            <h2>Tus publicaciones</h2>
+            <posts-by-user-id></posts-by-user-id>
         </div>
     </div>
 </div>

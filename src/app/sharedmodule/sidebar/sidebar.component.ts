@@ -14,7 +14,7 @@ export class SidebarComponent {
     this.rol = localStorage.getItem("rol") ?? ('')
   }
 
-  onLogoClick():void{  //ya funciona
+  onLogoClick():void{ 
     console.log("funciona")
     this.router.navigate(['main']);
   }
@@ -23,7 +23,7 @@ export class SidebarComponent {
     this.router.navigate(['profile'])
   }
   
-  cerrarSesion():void{  //ya funciona
+  cerrarSesion():void{ 
     localStorage.setItem('rol',"")
     this.router.navigate(['home'])
   }
