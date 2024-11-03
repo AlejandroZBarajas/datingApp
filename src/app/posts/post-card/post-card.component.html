@@ -1,20 +1,26 @@
-<div id="cardBody">
-    <div id="headers">
-        <h3>{{post.user_id}}</h3>
-        <h2>{{post.titulo}}</h2>
+<div id="padd">
+    <h2>Titulo: {{post.titulo}}</h2>
+    <div id="cardBody">
+        <div id="headers">
+            <h3>{{post.user_id}}</h3>
+        </div>
+        <div class="info">
+            <p>Descripción:</p>
+            <h3> {{post.descripcion}}</h3>
+        </div>
+        <div class="info">
+            <p>Duración: </p>
+            <h3>{{post.duracion}}</h3>
+        </div>
+        <div class="info">
+            <p>Costo: </p>
+            <h3>{{post.costo}}</h3>
+        </div>
     </div>
-    <div id="desc">
-        <p>{{post.descripcion}}</p>
-    </div>
-    <div id="info">
-        <div><h3>{{post.duracion}}</h3></div>
-        <div><h3>{{post.costo}}</h3></div>
-    </div>
-    <div id="bnts">
+    <div id="btns">
         <div *ngIf="rol==='Companion'" id="dualbtn">
-
-            <button>Editar</button>
-            <button>Solicitar</button>
+            <button (click)="toEdit()">Editar</button>
+            <button (click)="toDelete()">Eliminar</button>
         </div>
         <div *ngIf="rol==='Acompanied'" id="singlebtn">
             <button>Solicitar</button>

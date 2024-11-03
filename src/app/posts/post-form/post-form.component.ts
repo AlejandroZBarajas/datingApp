@@ -24,7 +24,7 @@ export class PostFormComponent {
       this.descripcion,
       this.duracion,
       this.costo,
-      this.user_id
+      this.user_id,
     )
     this.postsService.publishPost(newPost).subscribe({
       next: response=> {

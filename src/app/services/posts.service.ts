@@ -21,6 +21,7 @@ export class PostsService {
 
 
   getAllPosts(): Observable<Post[]> {
+    console.log(this.http.get<Post[]>(this.url))
     return this.http.get<Post[]>(this.url);
   }
 
@@ -32,7 +33,11 @@ export class PostsService {
 
 
   getPostsByUser(id: number): Observable<Post[]> {
-    console.log("llega al servicio y busca posts by id")
+    console.log("get by userId: ",this.http.get<Post[]>(`${this.url}user/${id}`))
     return this.http.get<Post[]>(`${this.url}user/${id}`);
+  }
+
+  deletePost(postId: number): Observable<Post> {
+    return this.http.delete<Post>(`${this.url}${postId}`);
   }
 }
