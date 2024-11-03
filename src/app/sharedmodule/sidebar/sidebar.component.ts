@@ -25,6 +25,7 @@ export class SidebarComponent {
   
   cerrarSesion():void{ 
     localStorage.setItem('rol',"")
+    localStorage.setItem('id',"")
     this.router.navigate(['home'])
   }
   toPost(){

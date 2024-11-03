@@ -4,6 +4,7 @@ import { PostCardComponent } from './post-card/post-card.component';
 import { PostFormComponent } from './post-form/post-form.component';
 import { FormsModule } from '@angular/forms';
 import { PostsByUserIdComponent } from './posts-by-user-id/posts-by-user-id.component';
+import { AllPostsComponent } from './all-posts/all-posts.component';
 
 
 
@@ -11,7 +12,8 @@ import { PostsByUserIdComponent } from './posts-by-user-id/posts-by-user-id.comp
   declarations: [
     PostCardComponent,
     PostFormComponent,
-    PostsByUserIdComponent
+    PostsByUserIdComponent,
+    AllPostsComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { PostsByUserIdComponent } from './posts-by-user-id/posts-by-user-id.comp
   exports: [
     PostCardComponent,
     PostFormComponent,
-    PostsByUserIdComponent
+    PostsByUserIdComponent,
+    AllPostsComponent
   ]
 })
 export class PostsModule { }

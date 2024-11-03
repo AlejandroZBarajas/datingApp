@@ -9,6 +9,7 @@ import { SharedmoduleModule } from '../sharedmodule/sharedmodule.module';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { PostsByUserIdComponent } from '../posts/posts-by-user-id/posts-by-user-id.component';
+import { AllPostsComponent } from '../posts/all-posts/all-posts.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PostsByUserIdComponent } from '../posts/posts-by-user-id/posts-by-user-
     RegisterFormComponent,
     LoginFormComponent,
     UsercardComponent,
-    PostsByUserIdComponent
+    PostsByUserIdComponent,
+    AllPostsComponent
   ]
 })
 export class UserModule { }
