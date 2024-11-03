@@ -5,6 +5,7 @@ import { UserViewComponent } from './pages/user-view/user-view.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { UpdateUserComponent } from './user/components/update-user/update-user.component';
 import { PostFormComponent } from './posts/post-form/post-form.component';
+import { EditPostComponent } from './posts/edit-post/edit-post.component';
 
 
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'profile', component:ProfileComponent},
   {path: 'update', component:UpdateUserComponent},
   {path: 'newPost', component: PostFormComponent},
+  { path: 'edit-post/:post_id', component: EditPostComponent },
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 

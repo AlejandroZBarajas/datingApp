@@ -21,7 +21,7 @@ export class PostCardComponent implements OnInit {
   }
 
   toEdit(){
-
+    this.router.navigate(['/edit-post', this.post.post_id]);
   }
 
   toDelete(){

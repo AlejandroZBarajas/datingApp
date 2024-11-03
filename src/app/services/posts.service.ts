@@ -40,4 +40,11 @@ export class PostsService {
   deletePost(postId: number): Observable<Post> {
     return this.http.delete<Post>(`${this.url}${postId}`);
   }
+
+  getPostById(post_id: number): Observable<Post> {
+    return this.http.get<Post>(`${this.url}${post_id}`);
+  }
+  updatePost(post: Post): Observable<Post> {
+    return this.http.put<Post>(`${this.url}${post.post_id}`, post);
+  }
 }

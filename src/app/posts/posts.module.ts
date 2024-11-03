@@ -5,6 +5,7 @@ import { PostFormComponent } from './post-form/post-form.component';
 import { FormsModule } from '@angular/forms';
 import { PostsByUserIdComponent } from './posts-by-user-id/posts-by-user-id.component';
 import { AllPostsComponent } from './all-posts/all-posts.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 
 
@@ -13,7 +14,8 @@ import { AllPostsComponent } from './all-posts/all-posts.component';
     PostCardComponent,
     PostFormComponent,
     PostsByUserIdComponent,
-    AllPostsComponent
+    AllPostsComponent,
+    EditPostComponent
   ],
   imports: [
     CommonModule,
