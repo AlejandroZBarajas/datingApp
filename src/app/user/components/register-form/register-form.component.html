@@ -1,0 +1,68 @@
+<div id="body">
+
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()" id="form">
+       <div class="inputField">
+           <label for="username">Nombre de usuario: </label>
+           <input id="username" formControlName="username" required>
+       </div>
+
+       <div class="inputField">
+        <label for="password">Contraseña</label>
+        <input id="pass1" formControlName="pass1" type="password" required>
+     </div>
+
+     <div class="inputField">
+        <label for="password">Confirme contraseña</label>
+        <input id="pass2" formControlName="pass2" type="password" required>
+     </div>
+
+     <h2 *ngIf="registerForm.hasError('passwordsMismatch') && registerForm.get('pass2')?.touched" class="error">
+      Las contraseñas no coinciden.
+    </h2>
+
+       <div class="inputField">
+           <label for="nombres">Nombre:</label>
+           <input id="nombrs" formControlName="nombres" required>
+       </div>
+       
+       <div class="inputField">
+           <label for="apellidoP">Apellido Paterno:</label>
+           <input id="apellidoP" formControlName="apellidoP" required>
+       </div>
+       
+       <div class="inputField">
+           <label for="apellidoM">Apellido Materno:</label>
+           <input id="apellidoM" formControlName="apellidoM" required>
+        </div>
+       
+       <div class="inputField">
+           <label class="radios">Sexo:</label>
+           <label>
+             <input type="radio" formControlName="sexo" value="Hombre" required>
+             Hombre
+           </label>
+           <label>
+             <input type="radio" formControlName="sexo" value="Mujer" required>
+            Mujer
+           </label>
+       </div>
+       
+       <div class="inputField">
+           <label class="radios">Rol:</label>
+           <label>
+             <input type="radio" formControlName="rol" value="Companion" required>
+             Compañero
+           </label>
+           <label>
+             <input type="radio" formControlName="rol" value="Accompanied" required>
+             Acompañado
+           </label>
+       </div>
+       
+       <div class="inputField" id="btn">
+           <button type="submit">Registrar</button>
+       </div>
+
+      </form>
+      
+</div>

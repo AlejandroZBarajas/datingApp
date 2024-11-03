@@ -1,0 +1,17 @@
+<div id="body">
+    <div id="sidebar">
+        <sidebar></sidebar>
+    </div>
+    <div class="main" id="posts">
+        <div *ngIf="role==='Accompanied'">
+            <h2>Publicaciones de acompañantes</h2>
+            <div>
+                <all-posts></all-posts>
+            </div>
+            
+        </div>
+        <div *ngIf="role==='Companion'">
+            <posts-by-user-id></posts-by-user-id>
+        </div>
+    </div>
+</div>

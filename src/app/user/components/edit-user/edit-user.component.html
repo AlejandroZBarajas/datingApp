@@ -1,0 +1,35 @@
+<div id="body">
+    <form [formGroup]="editForm" (ngSubmit)="onUpdate()" id="form">
+      <div class="inputField">
+        <label for="username">Nombre de usuario: </label>
+        <input id="username" formControlName="username" required>
+      </div>
+      <div class="inputField">
+        <label for="nombres">Nombre:</label>
+        <input id="nombres" formControlName="nombres" required>
+      </div>
+      <div class="inputField">
+        <label for="apellidoP">Apellido Paterno:</label>
+        <input id="apellidoP" formControlName="apellidoP" required>
+      </div>
+      <div class="inputField">
+        <label for="apellidoM">Apellido Materno:</label>
+        <input id="apellidoM" formControlName="apellidoM" required>
+      </div>
+      <div class="inputField">
+        <label class="radios">Sexo:</label>
+        <label>
+          <input type="radio" formControlName="sexo" value="Hombre" required>
+          Hombre
+        </label>
+        <label>
+          <input type="radio" formControlName="sexo" value="Mujer" required>
+          Mujer
+        </label>
+      </div>
+      <div class="inputField" id="btn">
+        <button type="submit">Actualizar</button>
+      </div>
+    </form>
+  </div>
+  

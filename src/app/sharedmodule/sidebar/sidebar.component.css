@@ -1,0 +1,47 @@
+#body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    padding: 20px;
+    
+}
+#logo{
+
+
+    width: 100%;
+    display: flex;
+
+}
+#logo img{
+    max-width: 100%;
+}
+#side{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 30px;
+}
+
+.sideOPT{
+ 
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#newPost{
+    border-radius: 25px;
+    background-color: rgb(237, 124, 75);
+}
+#post{
+    text-align: center;
+    color:white;
+}
+
+#logoff{
+
+    margin-top:100px;
+    
+}
+

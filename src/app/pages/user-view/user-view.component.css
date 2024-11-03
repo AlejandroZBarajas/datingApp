@@ -1,0 +1,51 @@
+#body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
+}
+#sidebar{
+    padding-left: 30px;
+    width: 40%;
+    padding-right: 100px;
+}
+
+#side{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 30px;
+}
+
+.sideOPT{
+ 
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#logo{
+
+
+    width: 100%;
+    display: flex;
+
+}
+#logo img{
+    max-width: 100%;
+}
+#posts{
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: 100vh;
+    border-left: solid rgb(255, 204, 204);
+}
+
+#logoff{
+
+    margin-top:100px;
+    
+}

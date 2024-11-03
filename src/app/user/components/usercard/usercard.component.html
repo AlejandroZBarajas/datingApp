@@ -1,0 +1,29 @@
+<div id="card" *ngIf="user">
+    <div id="info">
+        <div class="field">
+            <h3>Username:</h3>
+            <p>{{user.username}}</p>
+        </div>
+        <div class="field">
+            <h3>Nombre:</h3>
+            <p>{{user.nombres}}</p>
+        </div>
+        <div class="field">
+            <h3>Apellido Paterno:</h3>
+            <p>{{user.apellidoP}}</p>
+        </div>
+        <div class="field">
+            <h3>Apellido Materno:</h3>
+            <p>{{user.apellidoM}}</p>
+        </div>
+        <div class="field">
+            <h3>Sexo:</h3>
+            <p>{{user.sexo}}</p>
+        </div>
+       
+    </div>
+    <div id="actions">
+        <button (click)="toEdit()">Editar</button>
+        <button (click)="toDelete()">Eliminar</button>
+    </div>
+</div>

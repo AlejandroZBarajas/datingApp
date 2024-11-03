@@ -1,0 +1,44 @@
+#padd{
+    text-align: center;
+    border: solid red;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px;
+    background-color: rgb(255, 151, 107);;
+}
+#cardBody{
+    border: solid red;
+    background-color: white;
+    border-radius: 5px;
+    padding:25px;
+    margin:15px;
+    text-align: left;
+}
+.info{
+    margin: 10px;
+}
+#btns{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+button{
+    background-color: white;
+    margin: 15px;
+    color: red;
+    font-weight:900;
+    font-size: large;
+    padding: 10px;
+    border-radius: 20px;
+    border-color: red;
+    
+}
+h2{
+    color: white;
+    text-shadow: 
+        -1px -1px 0px black,
+        1px -1px 0px black,
+        -1px 1px 0px black,
+        1px 1px 0px black;
+}

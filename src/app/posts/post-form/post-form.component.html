@@ -1,0 +1,33 @@
+<div id="mainCont">    
+    <div id="postBody">
+        <div id="title">
+            <h3>Nuevo servicio</h3>
+        </div>
+        <form (ngSubmit)="onSubmit()">
+            <div class="inpFld">
+                <label for="titulo">Titulo: </label>
+                <input type="text" id="titulo" [(ngModel)]="titulo" name="titulo" required>
+            </div>
+
+            <div class="inpFld">
+                <label for="descripcion">Descripción: </label>
+                <input type="text" id="descripcion" [(ngModel)]="descripcion" name="descripcion" required>
+            </div>
+
+            <div class="inpFld">
+                <label for="duracion">Duración (horas): </label>
+                <input type="text" id="duracion" [(ngModel)]="duracion" name="duracion" required>
+            </div>
+
+            <div class="inpFld">
+                <label for="costo">Costo $MXN: </label>
+                <input type="text" id="costo" [(ngModel)]="costo" name="costo" required>
+            </div>
+            <div id="btns">
+                <button id="cancelar" (click)="return()">Cancelar</button>
+                <button id="publicar" type="submit">Publicar</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
